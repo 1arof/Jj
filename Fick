@@ -1,1 +1,157 @@
-no skid
+local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+function SacUsgiElZSSlAglw(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
+
+data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
+
+
+ 
+
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local DropGUI = Instance.new(SacUsgiElZSSlAglw('XeOoWIJhCKilLmdGjPvnbEZEJqykpVXdggEnPPkhUPRSkChPZGixgxHU2NyZWVuR3Vp'))
+local main = Instance.new(SacUsgiElZSSlAglw('XOUxHGUgPOXqACzKbZMCpZCwAbOVYsQiOQsdKBHZBlWVYnPKXESYwrzSW1hZ2VMYWJlbA=='))
+local DropTool = Instance.new(SacUsgiElZSSlAglw('zZcmYEHjKJooNqebQBHkDzAgiiFpgAaOjwHulHjqmALdPthJRVBEpThVGV4dEJ1dHRvbg=='))
+local Equip = Instance.new(SacUsgiElZSSlAglw('ZqVETizYIWKgdoWmLcxVAWwoblFMJZpUISobqyRPbpzRCiNWzclDKnvVGV4dEJ1dHRvbg=='))
+local Version = Instance.new(SacUsgiElZSSlAglw('BfjglEcPzezFqMndJDcQDzBnNKJpTvRKrsiYCmJwkIIcFJNeqXtTODSVGV4dEJ1dHRvbg=='))
+local Cred = Instance.new(SacUsgiElZSSlAglw('AaceDIkjJYmokTAOECxEwFjnKAZaAyNVqcyfJPWIEqXvLXCedhbfAGQVGV4dEJ1dHRvbg=='))
+
+--Properties:
+
+DropGUI.Name = SacUsgiElZSSlAglw('PSYvhyaOmSBEMfdWxrUrYyCqCCCWjfrzqRkxTiVRwsHPjDBSLOSZWKqRHJvcCBHVUk=')
+DropGUI.Parent = game.CoreGui
+DropGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = SacUsgiElZSSlAglw('yyxHJJOrSarEFuOtSCcKFilinohTxjccGZcvUedkZxnNMZymzolsburbWFpbg==')
+main.Parent = DropGUI
+main.Position = UDim2.new(0.0809101239, 0, 0.203790441, 0)
+main.Size = UDim2.new(0, 150, 0, 128)
+main.Image = SacUsgiElZSSlAglw('uCBOZYlAFEMWkKlKrzgrZsrESWscohlFlOKWiNydOuSUjHzTqtZTPfycmJ4YXNzZXRpZDovLzEwNzI5NDU1NjM0')
+main.Active = true
+main.Draggable = true
+
+DropTool.Name = SacUsgiElZSSlAglw('mJmYFBOIGRMAtOhqijfPUnmTJzeMZBbgQIZlYCrkfUDYYOqTuvVVxdxRHJvcCBUb29s')
+DropTool.Parent = main
+DropTool.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+DropTool.BackgroundTransparency = 0.500
+DropTool.Position = UDim2.new(0.0597826242, 0, 0.119906127, 0)
+DropTool.Size = UDim2.new(0, 55, 0, 50)
+DropTool.Font = Enum.Font.SourceSans
+DropTool.Text = SacUsgiElZSSlAglw('nHZLOkufPyhTFGhWOzjWvslfolHzeVEQziyZFGFqIQKfNYLDSLZlzyXS2lsbCBhbGw=')
+DropTool.TextColor3 = Color3.fromRGB(0, 0, 0)
+DropTool.TextScaled = true
+DropTool.TextSize = 14.000
+DropTool.TextWrapped = true
+DropTool.MouseButton1Down:Connect(function()
+for i,c in pairs(game.Players:GetPlayers()) do
+ohok = c.Character[SacUsgiElZSSlAglw('cFuxbdCZDsyEmZXTIGsolOoQgxcNIjklklaGigdghNXUDpdXLQECSybSGVhZA==')]
+local tbl_main = 
+{
+      ohok
+}
+game:GetService(SacUsgiElZSSlAglw('SuZOZbunlvgSNiEOTDmppqpgTdGwoqNBRqlfhmvXwJAzCfvvCeuaDnTUmVwbGljYXRlZFN0b3JhZ2U=')).Spawn_Events.DeleteCar:FireServer(unpack(tbl_main))
+end
+end)
+
+Equip.Name = SacUsgiElZSSlAglw('leWVjyAPNrqOQErNaLXlOlWRPPZLymiLgAwdUPtVncAamXtMOUGZXtERXF1aXA=')
+Equip.Parent = main
+Equip.BackgroundColor3 = Color3.fromRGB(172, 172, 172)
+Equip.BackgroundTransparency = 0.500
+Equip.Position = UDim2.new(0.55251956, 0, 0.119906083, 0)
+Equip.Size = UDim2.new(0, 58, 0, 50)
+Equip.Font = Enum.Font.SourceSans
+Equip.Text = SacUsgiElZSSlAglw('TaszSDIFPPUWNbXOROdzaqvAXyRlYMhcOhIoTtFPLVcvyRxrgGxstQEQnRvb2xz')
+Equip.TextColor3 = Color3.fromRGB(0, 0, 0)
+Equip.TextScaled = true
+Equip.TextSize = 14.000
+Equip.TextWrapped = true
+Equip.MouseButton1Click:Connect(function()
+local Tool = Instance.new(SacUsgiElZSSlAglw('KskHvNaOnLhdlIPQjNpPxQuruCOWCiiqhCtUnmlTcevLWgMuUoXyOWCVG9vbA=='),game.Players.LocalPlayer.Backpack)
+local Equipped = false
+
+Tool.RequiresHandle = false
+Tool.Name = SacUsgiElZSSlAglw('bzrBEHODuYCAcymDBTxuAHfpBxYeRTatizTBHFzmBKNulRBRQfudvTmRGVzdHJveSBUb29s')
+local Field = Instance.new(SacUsgiElZSSlAglw('jOwxPoagZQsCQaVdEWdsRSskPZhXllTRlKOjkJTZcIDsEGNHCUbdctOU2VsZWN0aW9uQm94'),game.Workspace)
+local Mouse = game.Players.LocalPlayer:GetMouse()
+Field.LineThickness = 0.1
+Tool.TextureId = SacUsgiElZSSlAglw('PRrhrvfkntTFVEcAKCMNnQqJqtEMyjcJOQgdJMGVXngzcPbwNhvbORIaHR0cDovL3d3dy5yb2Jsb3guY29tL2Fzc2V0Lz9pZD0xMjIyMzg3NA==')
+Tool.Equipped:Connect(function()
+Equipped = true
+
+while Equipped == true do
+if Mouse.Target ~= nil then
+Field.Adornee = Mouse.Target
+Mouse.Icon = SacUsgiElZSSlAglw('GXKGAcDEcXeRscCQiwMdamGevuVgiLpqgSCEzToGkduirNFXUTcGqVGcmJ4YXNzZXQ6Ly90ZXh0dXJlcy9IYW1tZXJDdXJzb3IucG5n')
+else
+Field.Adornee = nil
+Mouse.Icon = SacUsgiElZSSlAglw('UmLYkycvOkbngYctqzORdEfsCRCzigCenacgxdDQmjIBCJCYLpHxlza')
+end
+wait()
+end
+end)
+
+
+Tool.Unequipped:Connect(function()
+Equipped = false
+Field.Adornee = nil
+Mouse.Icon = SacUsgiElZSSlAglw('MkLGJUpaehimnWLwlswocsHFRNGMlzjzUquxlvTzvJHkwMjxrwcANmT')
+end)
+
+Tool.Activated:Connect(function()
+if Mouse.Target ~= nil then
+print(Mouse.Target)
+local obj = Mouse.Target
+local tbl_main = 
+{
+      obj
+}
+game:GetService(SacUsgiElZSSlAglw('RuWOrxUHDWVOHNZnLruREeMNtuSqmhfLhRkNhGPYTrQZIRybEzSDXGqUmVwbGljYXRlZFN0b3JhZ2U=')).Spawn_Events.DeleteCar:FireServer(unpack(tbl_main))
+local ex = Instance.newSacUsgiElZSSlAglw('DNqfwLSIONcZYQkUxtztfIMOecoRNquMHHAxGEPVwaPeBysWMVmMpnpRXhwbG9zaW9u')
+ex.BlastRadius = 0
+ex.Position = Mouse.Target.Position
+ex.Parent = workspace
+
+local AttemptTarget = Mouse.Target
+while AttemptTarget ~= nil do
+AttemptTarget.Velocity = Vector3.new(0,-1000000000000000,0)
+AttemptTarget.CanCollide = false
+local tbl_main = 
+{
+      obj
+}
+game:GetService(SacUsgiElZSSlAglw('gDcXtcKcpAxUjZsPghmcSdCvsUYCAOgcHrKSzwuntQQElVGKXNBRArBUmVwbGljYXRlZFN0b3JhZ2U=')).Spawn_Events.DeleteCar:FireServer(unpack(tbl_main))
+wait()
+end
+end
+end)
+end)
+
+
+Version.Name = SacUsgiElZSSlAglw('FSSHlJxCsjGMuXsxFCzUcJXadCDfyGDSXVTHLDDXTDTplUkBTDzQJGBVmVyc2lvbg==')
+Version.Parent = main
+Version.BackgroundColor3 = Color3.fromRGB(13, 105, 172)
+Version.BackgroundTransparency = 0.200
+Version.Position = UDim2.new(0, 0, 0.999885917, 0)
+Version.Size = UDim2.new(0, 151, 0, 34)
+Version.Font = Enum.Font.SourceSans
+Version.Text = SacUsgiElZSSlAglw('xtpluoHUNCasydHqyfzQZzolBmffKqCIwgPxSvlCTATlivnTWiHltxVTWFkZSBieSBSaXBfVjNybQ==')
+Version.TextColor3 = Color3.fromRGB(0, 0, 0)
+Version.TextScaled = true
+Version.TextSize = 14.000
+Version.TextWrapped = true
+
+Cred.Name = SacUsgiElZSSlAglw('tLRcMSyQpgJsznWLZZVzpBHCHZOKGlCaCruXswVADBWkatYEXQJcTpDQ3JlZA==')
+Cred.Parent = main
+Cred.BackgroundColor3 = Color3.fromRGB(13, 105, 172)
+Cred.BackgroundTransparency = 0.200
+Cred.Position = UDim2.new(0, 0, -0.266169071, 0)
+Cred.Size = UDim2.new(0, 151, 0, 34)
+Cred.Font = Enum.Font.SourceSans
+Cred.Text = SacUsgiElZSSlAglw('JbEEIAeSztSfnVJAtZASAfzIPZgEmvGDTXMvelZIgPlJykGBWuXAoHTREFXRw==')
+Cred.TextColor3 = Color3.fromRGB(0, 0, 0)
+Cred.TextSize = 20.000
+Cred.TextWrapped = true
+    
